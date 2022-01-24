@@ -1,0 +1,27 @@
+{
+  "name": "basic_angular",
+  "version": "1.0.0",
+  "description": "Here is my fist project in angular 12 version",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anant1222/Angular_blog.git"
+  },
+  "author": "Anant yadav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anant1222/Angular_blog/issues"
+  },
+  "homepage": "https://github.com/anant1222/Angular_blog#readme",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.7",
+    "nodemon": "^2.0.15",
+    "save": "^2.4.0"
+  }
+}
