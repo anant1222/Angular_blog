@@ -1,10 +1,10 @@
 {
   "name": "basic_angular",
   "version": "1.0.0",
-  "description": "Here is my fist project in angular 12 version",
+  "description": "Fist project in angular 12 version",
   "main": "app.js",
   "scripts": {
-    "start": "app.js"
+    "start": "node app"
   },
   "repository": {
     "type": "git",
@@ -22,14 +22,18 @@
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "express": "^4.17.2",
-    "express-request-id": "^2.0.1",
+    "express-request-id": "^1.4.1",
     "express-useragent": "^1.0.15",
     "http": "0.0.1-security",
     "http-errors": "^2.0.0",
+    "moment": "^2.29.1",
     "mongoose": "^6.1.7",
+    "mysql2": "^2.3.3",
     "nodemon": "^2.0.15",
+    "path": "^0.12.7",
     "save": "^2.4.0",
     "sequelize": "^6.14.0",
+    "sequelize-auto": "^0.8.8",
     "swagger-ui-express": "^4.3.0"
   }
 }
