@@ -1,7 +1,6 @@
 'use strict';
 var config = {
 	development : {
-		//mysql connection settings
 		cachyDatabase : {
 			host : 'localhost',
 			user : 'root',
@@ -13,7 +12,6 @@ var config = {
 			debug: (process.env.MYSQL_DEBUG == 'YES') || false
 		},
 		isSwaggerAPI: (process.env.SWAGGER_API == 'YES') || true,
-		//server details
 		
 	},
 };
