@@ -1,25 +1,33 @@
 const Sequelize = require('sequelize');
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('users', {
+  return sequelize.define('user_data', {
     id: {
       autoIncrement: true,
-      type: DataTypes.INTEGER,
+      type: DataTypes.INTEGER.UNSIGNED,
       allowNull: false,
       primaryKey: true
     },
     name: {
-      type: DataTypes.STRING(20),
+      type: DataTypes.STRING(50),
       allowNull: true
     },
     status: {
-      type: DataTypes.TINYINT,
+      type: DataTypes.ENUM('ACTIVE','INACTIVE','DELETED'),
       allowNull: false,
-      defaultValue: 1
+      defaultValue: "ACTIVE"
+    },
+    created_on: {
+      type: DataTypes.BIGINT,
+      allowNull: true
+    },
+    updated_on: {
+      type: DataTypes.BIGINT,
+      allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'users',
-    timestamps: true,
+    tableName: 'user_data',
+    timestamps: false,
     indexes: [
       {
         name: "PRIMARY",

@@ -4,13 +4,10 @@ const responseCode = require('../../utils/response-code')
 const moment = require('moment')
 // const {  } = require('../dao-manager')
 const models = initModels(sequelize);
-const addTask = async (data) => {
+const getUser = async (data) => {
     try {
         let responseObject = {}
-        let currTime = moment().unix()*1000
-        data.updated_on = currTime;
-        data.created_on = currTime;
-        let res = await models.user_data.create(data)
+        let res = await models.user_data.findAll()
         if (res) {
             responseObject.code = responseCode.SUCCESS;
             responseObject.data = {};
@@ -18,7 +15,6 @@ const addTask = async (data) => {
             responseObject.code = responseCode.SOME_INTERNAL_ERROR;
             responseObject.data = {};
         }
-        return responseObject
     } catch (error) {
         responseObject.code = responseCode.SOME_INTERNAL_ERROR;
         responseObject.data = {};
@@ -26,4 +22,4 @@ const addTask = async (data) => {
 
     return responseObject
 }
-module.exports = addTask
+module.exports = getUser

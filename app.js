@@ -1,4 +1,4 @@
-const express = require('express')
+const express = require('express');
 var cors = require('cors');
 var cookieParser = require('cookie-parser');
 var router = require('./routes/index');
