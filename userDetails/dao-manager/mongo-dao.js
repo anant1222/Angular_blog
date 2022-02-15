@@ -1,6 +1,6 @@
 'use strict';
 const path = require('path');
-const logger = require('../utils/logger').logger;
+const logger = require('../../utils/logger').logger;
 
 module.exports = class MongoDao {
     constructor(model) {
@@ -79,6 +79,19 @@ module.exports = class MongoDao {
             logger.error({
                 error: error,
                 methodName: 'findOneAndRemove',
+                fileName: path.basename(__filename)
+            });
+            throw new Error(error);
+        }
+    }
+    async count() {
+        try {
+            let result = await this.model.count()
+            return result
+        } catch (error) {
+            logger.error({
+                error: error,
+                methodName: 'count',
                 fileName: path.basename(__filename)
             });
             throw new Error(error);

@@ -1,7 +1,7 @@
 'use strict';
 const format = require('util').format;
 const mongoBannerPaneldb = {
-    useAuth: (process.env.MONGODB_USE_AUTH == 'YES') || true,
+    useAuth: (process.env.MONGODB_USE_AUTH == 'YES') || false,
     withAuthDbDetails: {
 		username: process.env.MONGO_USERNAME || "",
 		password: process.env.MONGO_PASSWORD || "",

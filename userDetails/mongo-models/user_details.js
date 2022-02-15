@@ -8,8 +8,8 @@ const userDetails = new mongoose.Schema({
     user_id: Number,
     user_name:String,
     first_name:String,
-    last_name:Number,
-    number:Number,
+    last_name:String,
+    mobile:String,
     desc:String,
     ct: {
         type:Long

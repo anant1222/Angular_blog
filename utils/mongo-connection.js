@@ -34,7 +34,7 @@ module.exports = (() => {
     });
 
     db.once("open", function () {
-        console.log("client MongoDB Connection ok ");
+        console.log(chalk.green("client MongoDB Connection ok "));
     });
 
     return {
