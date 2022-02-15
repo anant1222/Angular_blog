@@ -1,8 +1,8 @@
-const express = require('express')
+const express = require('express');
 var cors = require('cors');
 var cookieParser = require('cookie-parser');
 var router = require('./routes/index');
-var addRequestId = require('express-request-id');
+var addRequestId = require('express-request-id')();
 var useragent = require('express-useragent');
 const http = require('http');
 const path = require('path');
@@ -12,7 +12,7 @@ global.NODE_PATH = db_config.NODE_MODULES_PATH;
 var createError = require('http-errors');
 const server = http.createServer(app);
 var app = express();
-app.use(addRequestId());
+app.use(addRequestId);
 var corsOptions = {
     origin: '*',
     optionsSuccessStatus: 200 

@@ -3,12 +3,12 @@ const Sequelize = require('sequelize');
 const config = require("../config/dbconfig").development;
 const chalk = require('chalk');
 console.log('Helooooooooooooooooooo')
-const createPool = new Sequelize(config.cachyDatabase.database, config.cachyDatabase.user,
-    config.cachyDatabase.password, {
+const createPool = new Sequelize(config.angularDatabase.database, config.angularDatabase.user,
+    config.angularDatabase.password, {
         //timezone: '+05:30', //here you can pass timezone
-        host: config.cachyDatabase.host,
+        host: config.angularDatabase.host,
         dialect: 'mariadb',
-        logging: config.cachyDatabase.logging,
+        port:3306,
         pool: {
             max: 5,
             min: 0,
