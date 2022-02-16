@@ -11,6 +11,8 @@ routes.get("/user/list", controller.getUserController);
 
 //mongo
 
-routes.post("/user/data",validation.userDetails, controller.userDetailsController);
+routes.get("/user/data/list",controller.listUserDetailsController);
+routes.post("/user/data/add",validation.userDetails, controller.userDetailsController);
 routes.post("/user/data/update",validation.updateUserDetails, controller.updateUserDetailsController);
+routes.get("/user/data/delete", controller.deleteUserDetails);
 module.exports= routes;

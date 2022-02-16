@@ -1,4 +1,5 @@
 module.exports = {
     200 : 'Success',
-    1000 : 'Some unexpected error occurred.'
+    201 : 'Some unexpected error occurred.',
+    202 : 'No data found.'
 };

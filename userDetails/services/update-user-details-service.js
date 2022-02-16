@@ -26,7 +26,10 @@ const updateUserDetails = async (req) => {
         if(req.desc){
             insertData.desc = req.desc
         }
-        let res = await userDetailsMongoDao.update({user_id:req.user_id},insertData,{upsert:true})
+        try {
+            let res = await userDetailsMongoDao.update({user_id:req.user_id},insertData,{upsert:true})
+        } catch (error) {
+        }
         if(res){
             responseObject.code = responseCode.SUCCESS;
             responseObject.data = {};
