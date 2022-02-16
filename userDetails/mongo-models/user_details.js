@@ -14,6 +14,9 @@ const userDetails = new mongoose.Schema({
     ct: {
         type:Long
     },
+    ut: {
+        type:Long
+    },
 }, {
     timestamps: false,
     versionKey:false
